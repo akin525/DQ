@@ -30,7 +30,6 @@ export default function Admin() {
             <Route path="/add" exact component={Add} />
             <Route path="/withdraw" exact component={Bank} />
             <Route path="/admin/maps" exact component={Maps} />
-            <Route path="/settings" exact component={Settings} />
             <Route path="/admin/tables" exact component={Tables} />
             <Route path="/spin" exact component={Game} />
             <Route path="/tac" exact component={Game1} />
