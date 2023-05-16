@@ -274,7 +274,7 @@ const body={
                 </div>
 
                 <a href="#">Forgot Password?</a>
-                    <button type="button" onClick={handleSubmit} className="btn1">Login</button>
+                    <button type="button" onClick={handleSubmit} className="btn1"><i className="fa fa-user-circle"></i> Login</button>
                     <hr/>
                     <Link to={'/auth/register'} className="text-center">Sign Up</Link>
 

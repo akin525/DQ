@@ -124,7 +124,7 @@ console.log(baseURL);
                 confirmButtonText: "OK",
               }).then(function () {
                 // Redirect the user
-                // window.location.href = "/dashboard";
+                window.location.href = "/auth/login";
               });
             }
             // setPost(response.data);
@@ -197,7 +197,7 @@ console.log(baseURL);
                     </div>
 
                     <Link to={'/auth/login'} className="text-center">Login</Link>
-                    <button type="button" onClick={handleSubmit} className="btn1">Sign Up</button>
+                    <button type="button" onClick={handleSubmit} className="btn1"><i className="fa fa-user-circle"></i> Sign Up</button>
                     <hr/>
 
                   </div>
