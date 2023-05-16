@@ -57,10 +57,10 @@ function Menu({ children }) {
                 <div className="card-body text-center">
                     <div className="">
                         <center>
-                            <Link to={'/withdraw'} className="btn btn-success " style={{margin: "5px"}} >Withdraw</Link>
-                            <Link to={'/add'} className="btn btn-success" style={{margin: "5px"}} >Add Bank</Link>
-                            <Link to={'/add'} className="btn btn-success" style={{margin: "5px"}} >Contact Us</Link>
-                            <a className="btn btn-success" style={{margin: "5px"}} href="#">My Point: <i className="fa fa-coins"></i>
+                            <Link to={'/withdraw'} className="btn btn-success " style={{margin: "5px"}} > <i className="fa fa-money-bill"></i> Withdraw</Link>
+                            <Link to={'/add'} className="btn btn-success" style={{margin: "5px"}} ><i className="fa fa-piggy-bank"></i>Add Bank</Link>
+                            <Link to={'/add'} className="btn btn-success" style={{margin: "5px"}} ><i className="fa fa-phone-slash"></i>Contact Us</Link>
+                            <a className="btn btn-success" style={{margin: "5px"}} href="#"><i className="fa fa-user"></i>My Point: <i className="fa fa-coins"></i>
                                 {parseInt(point).toLocaleString()}
                             </a>
 
