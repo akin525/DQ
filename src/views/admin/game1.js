@@ -63,11 +63,7 @@ function Game1() {
 
 
     return (
-        <div className="g-sidenav-show  bg-gray-200">
 
-        <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-          <Head/>
-         <Menu/>
             <div className="container-fluid py-4">
                 <div className="">
 
@@ -162,8 +158,7 @@ function Game1() {
         {/*    )}*/}
         {/*</div>*/}
             </div>
-        </main>
-        </div>
+
     );
 }
 

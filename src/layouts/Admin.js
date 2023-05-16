@@ -19,11 +19,18 @@ import Add from "views/admin/add.js";
 import Bank from "views/admin/withdraw.js";
 import Game from "../views/admin/game";
 import Game1 from "views/admin/game1";
+import Head from "../components/Sidebar/Head";
+import Menu from "../components/Sidebar/Menu";
 
 export default function Admin() {
   return (
     <>
+      <div className="g-sidenav-show  bg-gray-200">
 
+        <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+          <Head/>
+
+          <Menu/>
           <Switch>
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/profile" exact component={Settings} />
@@ -35,7 +42,8 @@ export default function Admin() {
             <Route path="/tac" exact component={Game1} />
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
-
+        </main>
+      </div>
 
     </>
   );
