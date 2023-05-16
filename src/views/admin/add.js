@@ -31,6 +31,7 @@ export default function Add() {
             evt.target.classList.add('activeLoading');
         })
     })
+    const [loading, setLoading] = useState(false);
     const baseURL ="https://5stargames.5starcompany.com.ng/api/profile";
     const baseURL4 ="https://5stargames.5starcompany.com.ng/api/verify_bank";
     const baseURL3 = "https://5stargames.5starcompany.com.ng/api/bank_accounts";
@@ -67,6 +68,8 @@ export default function Add() {
     }
 
     React.useEffect(() => {
+        setLoading(true);
+
         handlebank();
         axios
             .get(baseURL, {
@@ -82,6 +85,7 @@ export default function Add() {
                     // window.location='/login';
                 }
                 setName1(response.data.data.name);
+                setLoading(false);
 
                 // console.log(response.data.data.name);
             });
@@ -188,6 +192,7 @@ export default function Add() {
 
     }
     const handleSubmit  = async () =>  {
+        setLoading(true);
 
         try {
             axios.post(baseURL3, {
@@ -205,9 +210,9 @@ export default function Add() {
             }).then(response => {
                 setError("");
                 setMessage(response);
-                console.log("response");
-                console.log(response);
-                if (response.data.status === "0") {
+                setLoading(false);
+
+                if (response.data.success === 0) {
                     setError(response.data.message);
                     swal({
                         title: "Fail",
@@ -230,7 +235,7 @@ export default function Add() {
                         confirmButtonText: "OK",
                     }).then(function () {
                         // Redirect the user
-                        window.location.href = "/dashboard";
+                        // window.location.href = "/dashboard";
                     });
                 }
                 // setPost(response.data);
@@ -245,7 +250,9 @@ export default function Add() {
 
     return (
         <>
-
+            {loading ? <div className="loader-container">
+                    <div className="spinner"/>
+                </div> :
                     <div className="container-fluid py-4">
 
                         <div className="flex flex-wrap">
@@ -315,7 +322,7 @@ export default function Add() {
 
                                             </div>
                                             {name === "" || name === "Validating IUC Number......."?<div></div>: <button type="button" onClick={handleSubmit}  className="btn btn-success">
-                                                Add Bank<span className="load loading"></span>
+                                                Add Bank
                                             </button>}
                                             <hr className="mt-6 border-b-1 border-blueGray-300" />
                                         </form>
@@ -326,6 +333,7 @@ export default function Add() {
 
                         </div>
                     </div>
+            }
 
         </>
     );

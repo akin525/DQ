@@ -85,10 +85,10 @@ export default function Tv() {
                     // window.location='/login';
                 }
                 setName(response.data.data.name);
+                setLoading(false);
 
                 // console.log(response.data.data.name);
             });
-        setLoading(false);
 
 
     }, []);
@@ -135,7 +135,9 @@ export default function Tv() {
 
                 }
             }).then(response => {
-                if (response.data.success == "0") {
+                setLoading(false);
+
+                if (response.data.success === 0) {
                     setError(response.data.message);
                     swal({
                         title: "Fail",
@@ -163,7 +165,6 @@ export default function Tv() {
                 }
                 // setPost(response.data);
             });
-            setLoading(false);
 
         }catch (e) {
             console.log(e);
@@ -176,6 +177,9 @@ export default function Tv() {
     return (
         <>
 
+            {loading ? <div className="loader-container">
+                    <div className="spinner"/>
+                </div> :
                     <div className="container-fluid py-4">
 
                     <div className="flex flex-wrap">
@@ -194,7 +198,7 @@ export default function Tv() {
 
                                         {bank ==""?
 
-                                            <button className="btn btn-success">Add Bank</button>:
+                                            <Link to={'/add'} className="btn btn-success">Add Bank</Link>:
                                         <div className="relative w-full mb-3">
                                             <label
                                                 className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -239,7 +243,7 @@ export default function Tv() {
 
                                 </div>
                                 <button type="button" onClick={handleSubmit}  className="btn btn-success">
-                                    Withdraw<span className="load loading"></span>
+                                    Withdraw
                                 </button>
                                 <hr className="mt-6 border-b-1 border-blueGray-300" />
                             </form>
@@ -251,6 +255,7 @@ export default function Tv() {
             </div>
 
                     </div>
+            }
 
         </>
     );
