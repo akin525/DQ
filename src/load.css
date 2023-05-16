@@ -95,8 +95,8 @@ button .loading {
 }
 
 .spinner {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     border: 8px solid;
     border-color: #208b37 transparent #208b37 transparent;
     border-radius: 50%;

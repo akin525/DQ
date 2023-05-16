@@ -22,7 +22,7 @@ ReactDOM.render(
       <Route path="/admin" component={Admin} />
       <Route path="/auth" component={Auth} />
       {/* add routes without layouts */}
-      <Route path="/settings" exact component={Admin} />
+      <Route path="/profile" exact component={Admin} />
       <Route path="/" exact component={Auth} />
       <Route path="/dashboard" exact component={Admin} />
       <Route path="/add" exact component={Admin} />

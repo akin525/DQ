@@ -146,7 +146,7 @@ export default function Dashboard() {
                         </div>
                         <hr className="dark horizontal my-0"/>
                             <div className="card-footer p-3">
-                                <button className="btn btn-outline-success">My Profile</button>
+                                <Link to={'/profile'} className="btn btn-outline-success">My Profile</Link>
 
                             </div>
                     </div>
