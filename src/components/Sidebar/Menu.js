@@ -46,14 +46,14 @@ function Menu({ children }) {
     return(
         <>
             <div className="card">
-                <div className="card-body">
+                <div className="card-body text-center">
                     <h6>{name}</h6>
 
                     <Link to={'/dashboard'} className="btn btn-success" href={'/dashboard'}>Back To Homepage</Link>
                 </div>
             </div>
             <div className="card">
-                <div className="card-body">
+                <div className="card-body text-center">
                     <div className="">
                         <center>
                             <Link to={'/withdraw'} className="btn btn-success " style={{margin: "5px"}} >Withdraw</Link>
