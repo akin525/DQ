@@ -48,9 +48,9 @@ function Menu({ children }) {
         <>
             <div className="card">
                 <div className="card-body text-center">
-                    <h6>{name}</h6>
+                    <h6><i className="fa fa-user-circle"></i>{name}</h6>
 
-                    <Link to={'/dashboard'} className="btn btn-success" href={'/dashboard'}>Back To Homepage</Link>
+                    <Link to={'/dashboard'} className="btn btn-success" href={'/dashboard'}><i className="fa fa-home"></i>Back To Homepage</Link>
                 </div>
             </div>
             <div className="card">
