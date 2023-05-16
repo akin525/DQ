@@ -37,6 +37,7 @@ function Menu({ children }) {
                 }
                 setName(response.data.data.name);
                 setEmail(response.data.data.email);
+                setpoint(response.data.data.points)
 
                 // setLoading(false);
             });
@@ -60,7 +61,7 @@ function Menu({ children }) {
                             <Link to={'/add'} className="btn btn-success" style={{margin: "5px"}} >Add Bank</Link>
                             <Link to={'/add'} className="btn btn-success" style={{margin: "5px"}} >Contact Us</Link>
                             <a className="btn btn-success" style={{margin: "5px"}} href="#">My Point: <i className="fa fa-coins"></i>
-                                1,000
+                                {parseInt(point).toLocaleString()}
                             </a>
 
                         </center>
