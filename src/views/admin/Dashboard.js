@@ -19,7 +19,7 @@ import Head from "../../components/Sidebar/Head";
 import tae from "../../tae.png";
 import spin2 from "../../spi.jpeg";
 import dai from "../../coin.png";
-import wallet from "../../wal.png";
+import wallet from "../../pro.png";
 import 'da/assets/css/nucleo-icons.css';
 import 'da/assets/css/nucleo-svg.css';
 import 'da/assets/css/material-dashboard.css?v=3.0.4';
@@ -146,7 +146,7 @@ export default function Dashboard() {
                         </div>
                         <hr className="dark horizontal my-0"/>
                             <div className="card-footer p-3">
-                                <button className="btn btn-outline-success">200point</button>
+                                <button className="btn btn-outline-success">My Profile</button>
 
                             </div>
                     </div>
